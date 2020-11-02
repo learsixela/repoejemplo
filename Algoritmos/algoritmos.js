@@ -48,3 +48,17 @@ x = op(2, 3) + op(3, 5); //x= 5 + 8 > x  = 13
 console.log('x is', x);
 
 //rspt: 'c is 5','c is 8','x is 13'
+
+/** */
+function op(a, b) { //a=; b= 
+    c = a + b; //c = 
+    console.log('c is', c);
+    return c; // return 
+}
+x = op(2, 3) + op(3, op(2, 1)) + op(op(2, 1), op(2, 3));
+//x= 5+ op(3, 3)+ op(op(2, 1), op(2, 3))
+//x= 5 + 6 + op(3,5) 
+//x= 5+6+8 >19 ; x= 19
+console.log('x is', x)
+
+//rspt: 'c is 5','c is 3','c is 6','c is 3','c is 5','c is 8','x is 19'
