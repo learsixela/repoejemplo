@@ -122,3 +122,50 @@ for (var i = 0; i < 5; i++) { //i=0>3>4>7>8 ;    i = i+1 > i+=1 >i++
 for (var i = 0; i < x.length; i++) { //i=0>1>2>3>4>5>6
     console.log(x[i]); //1,2,3,4,5,10
 }
+
+/** 
+ * 11
+ */
+
+var x = 15; //creacion de una variable
+console.log(x); //imprimiendo el contenido de x
+
+function awesome() {
+    var x = 10; //creacion de variable 
+    console.log(x); //imprimiendo el contenido de x
+}
+console.log(x);
+awesome();
+console.log(x);
+
+//rspt:15,15, 10,15
+
+/**
+ * 12
+ */
+
+for (var i = 0; i < 15; i += 2) { //i=0>2>4>6>8>10>12>14>16    ; i = i+2  
+    console.log(i);
+}
+
+//rspt:0,2,4,6,8,10,12,14
+
+/**
+ * 13
+ */
+var x = [
+        [2, 3],
+        [4, 5]
+    ]
+    //x[0] => [2, 3] => x[0][0] = 2;
+    //x[0][1] = 3
+    //x[1] => [4, 5]
+
+for (var i = 0; i < 3; i++) { //i=0>1>2>3
+
+    for (var j = 0; j < 2; j++) { //j=0>1>2
+        console.log(i * j);
+    }
+
+}
+//rpst:0,0,0,1,0,2
