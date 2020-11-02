@@ -169,3 +169,35 @@ for (var i = 0; i < 3; i++) { //i=0>1>2>3
 
 }
 //rpst:0,0,0,1,0,2
+
+/**
+ * 14
+ */
+function looping(x, y) { //x=3; y=3
+    for (var i = 0; i < x; i++) { //i=0>1>2>3
+
+        for (var j = 0; j < x; j++) { //j=0>1>2>3
+            console.log(i * j);
+        }
+    }
+}
+z = looping(3, 3); //z= undefined
+console.log(z); //undefined
+//rspt:0,0,0,0,1,2,0,2,4,undefined
+
+/**
+ * 15
+ */
+function looping(x, y) { // x= 3; y= 5
+    for (var i = 0; i < x; i++) { //i=0>1>2>3
+
+        for (var j = 0; j < y; j++) { //j=0>1>2>3>4>5
+            console.log(i * j);
+        }
+    }
+    return x * y; //return 15
+}
+
+z = looping(3, 5); //z= 15
+console.log(z); //15
+//rspt:0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
