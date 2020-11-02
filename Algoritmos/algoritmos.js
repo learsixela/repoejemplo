@@ -37,5 +37,14 @@ console.log('x is', x);
 //rspt:'n is 3','n is 5','x is 16'
 
 /**
- * 
+ *  5
  */
+function op(a, b) { //a=3;b=5
+    c = a + b; //c = 8
+    console.log('c is', c);
+    return c; //return 8
+}
+x = op(2, 3) + op(3, 5); //x= 5 + 8 > x  = 13
+console.log('x is', x);
+
+//rspt: 'c is 5','c is 8','x is 13'
