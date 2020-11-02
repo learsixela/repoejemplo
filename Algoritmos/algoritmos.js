@@ -27,10 +27,15 @@ console.log('x is', x);
 //rspt:'n is 3','x is 18'
 
 /** */
-function a(n) {
+function a(n) { //n=5
     console.log('n is', n);
-    y = n * 2;
-    return y;
+    y = n * 2; //10
+    return y; //return 10
 }
-x = a(3) + a(5);
+x = a(3) + a(5); //x = 6 + 10 > x= 16
 console.log('x is', x);
+//rspt:'n is 3','n is 5','x is 16'
+
+/**
+ * 
+ */
