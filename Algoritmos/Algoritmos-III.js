@@ -84,15 +84,15 @@ console.log(a([5, 7, -1, 4])); //console.log([5, "Coding", "Dojo", 4])
 
 
 /** 7 **/
-function a(x) {
-    if (x[0] > x[1]) {
+function a(x) { //x[0]=>15; x[1]=12
+    if (x[0] > x[1]) { //15>12
         return x[1];
     }
     return 10;
 }
-b = a([5, 10])
+b = a([15, 12]) //b= 12
 console.log(b);
-//Rspt:
+//Rspt:12
 
 
 /** 8 **/
