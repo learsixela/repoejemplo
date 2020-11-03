@@ -201,3 +201,87 @@ function looping(x, y) { // x= 3; y= 5
 z = looping(3, 5); //z= 15
 console.log(z); //15
 //rspt:0,0,0,0,0,0,1,2,3,4,0,2,4,6,8,15
+
+
+/**
+ * 2 parte
+ * Por favor, completa los siguientes códigos para que 
+ * la función imprima (print) todos los enteros (integers) de 1 a x.
+ *  Si x es negativo, haz que se muestre (print/log) “número negativo” 
+ * y que la función devuelva falso.
+ * el return en una funcion sale de ella
+ */
+function printUpTo(x) { //x=-10
+
+    for (var i = 1; i <= x; i++) { //i=1>2>3>4>5>6>7>8>9>10>11
+        console.log(i); //>1,2,3,4,5,6,7,8,9,10
+    }
+    if (x < 0) { //-10 < 0
+        console.log("numero negativo");
+        return false;
+    }
+
+}
+printUpTo(1000); // debería imprimir todos los enteros de 1 to 1000
+y = printUpTo(-10); // y = false
+console.log(y); // debería imprimir false
+
+//rspt=1,2,3,4,5,6,7,8,9,10...1000,"numero negativo",false
+
+//las variables es python las define el contenido
+
+/**
+ * Completa el código de más abajo para que la función imprima enteros (integers)
+ *  de 0 a x y donde cada entero imprima la suma (sum) parcial. 
+ * Haz que la función entregue la suma final.
+ */
+
+function printSum(x) { //x=255
+    var sum = 0;
+    for (var i = 0; i <= x; i++) { //i=0>1>2.....254>255>256
+        console.log(i) //0,1,2,...254,255
+        sum = sum + i; //32385+255
+        console.log(sum); //0,1,3,6,10,15,21...32131,32385,32640
+    }
+    return sum; //32640
+}
+y = printSum(255) // debería imprimir todos los enteros de 0 a 255 y que cada entero imprima la suma parcial.
+console.log(y) // debería imprimir 32640-255-254
+    //rspt: 0,1,2...255
+
+
+/**
+ * Completa el código a continuación para que la función entregue
+ *  la suma de todos los valores en un array dado.
+ */
+
+function printSumArray(x) { //x=[1,2,3]; x[0]=>1; x[1]=>2;x[2]=>3; x.length=3
+    var sum = 0; //1>3>6
+    for (var i = 0; i < x.length; i++) { //i=0>1>2>3
+        sum = sum + x[i]; //sum=3+3
+    }
+    return sum;
+}
+console.log(printSumArray([1, 2, 3])); // debería imprimir 6
+//console.log(6)-> 6
+
+
+/**
+ * Crea una función que entregue el elemento más grande (largest element) 
+ * en un array. 
+ * Por ejemplo largestElement([1,30,5,7]) debiera dar como resultado 30.
+ */
+
+function largestElement(arreglo) { //arreglo = [1,30,5,7];arreglo.length=4
+
+    var mayor = arreglo[0] //mayor = 1>30
+
+    for (var i = 0; i < arreglo.length; i++) { //i=0>1>2>3>4
+        if (arreglo[i] > mayor) { //7>30
+            mayor = arreglo[i]
+        }
+    }
+    return mayor
+}
+console.log(largestElement([1, 30, 5, 7]))
+    //console.log(30);//30
