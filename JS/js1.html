@@ -1,0 +1,20 @@
+<html lang="en">
+<script>
+    function removeRange(arreglo, inicio, final) { //arreglo=[20,30,40,50,60,70];
+        // inicio=2 ; final=4 ; arreglo.length=6
+        var arrAux = []; //[20,30,70]
+        for (var i = 0; i < arreglo.length; i++) { //i=0>1>2>3>4>5>6
+
+            if (i < inicio || i > final) { //5 < 2 o 5 >4  FoV=V
+                arrAux.push(arreglo[i])
+            }
+        }
+        return arrAux; //return [20,30,70]
+
+    }
+
+    b = removeRange([20, 30, 40, 50, 60, 70], 1, 3); //b= [20,30,70]
+    console.log(b); //[20,30,70]
+</script>
+
+</html>

@@ -104,16 +104,25 @@ function sum(x) {
     }
     return sum;
 }
-//Rspt:
-
+//Rspt:undefined
+var v = [1, 2, 3, 4, 5]; //v.length=5
+for (var w = 0; w < v.length; w++) { //w= 0>1 >2>3
+    v.pop();
+}
+console.log(v); //v=[1,2]
 
 
 /**Parte 2**/
-//1) Analiza los valores de un array y obtén el promedio (average) de esos valores:
+//1) Analiza los valores de un array y 
+//obtén el promedio (average) de esos valores:
 
 function printAverage(x) {
-    sum = 0;
-    // your code here
+    sum = 0; //acumulador
+    for (var i = 0; i < x.length; i++) {
+        sum = sum + x[i];
+    } //suma de todos / por la cantidad
+    //var promedio = sum/x.length;
+    return sum / x.length; //promedio
 }
 y = printAverage([1, 2, 3]);
 console.log(y); // should log 2
@@ -123,24 +132,100 @@ console.log(y); // should log 5
 
 
 
-//2) Crea un array con todos los enteros impares (odd integers) entre 1 y 255 (inclusive)
+//2) Crea un array con todos los enteros impares (odd integers) 
+//entre 1 y 255 (inclusive)
 
 function returnOddArray() {
-    // your code here
+    var arreglo = []; //[1,3,5,7...,253,255]
+
+    for (var i = 1; i <= 255; i += 2) { //i=1>3>5>7>...>253>255>257
+        arreglo.push(i);
+    }
+    //console.log(arreglo);//[1,3,5,7...,253,255]
+    return arreglo
+
 }
 y = returnOddArray();
 console.log(y); // should log [1,3,5,...,253,255]
+//undefined
 
 
 
-//3) Cuadra cada valor con un array dado, obteniendo el mismo array con valores cambiados..
+//3) Cuadra cada valor con un array dado, 
+//obteniendo el mismo array con valores cambiados..
 
-function squareValue(x) {
-    // your code here
-    return x;
+function squareValue(x) { //x= [1, 2, 3]; x.length=3
+
+    for (var i = 0; i < x.length; i++) { //i=0>1>2>3
+        //x[i] = -> si existre lo reemplaza
+        x[i] = x[i] * x[i]; //x[2] = 3*3
+    }
+    return x; //[1,4,9]
 }
+
 y = squareValue([1, 2, 3]);
 console.log(y); // should log [1,4,9]
 
 y = squareValue([2, 5, 8]);
 console.log(y); // should log [4,25,64]
+
+
+
+/**
+ * [20,30,40,50,60,70] ->[20,30,70]   2,4
+ */
+function removeRange(arreglo, inicio, final) { //arreglo=[20,30,40,50,60,70];
+    // inicio=2 ; final=4 ; arreglo.length=6
+    var arrAux = []; //[20,30,70]
+    for (var i = 0; i < arreglo.length; i++) { //i=0>1>2>3>4>5>6
+
+        if (i < inicio || i > final) { //5 < 2 o 5 >4  FoV=V
+            arrAux.push(arreglo[i])
+        }
+
+        /*     [ 2,4 ] 2,3,4
+        ]2,4] 3,4
+        ]2,4[ 3
+        0,1,2,3,4,5 
+*/
+        /*
+        if (i < inicio) {
+                
+        }
+        if (i > final) {
+
+        } */
+
+        /** tabla de verdad
+         *  V y V = V 
+         *  V y F = F
+         *  F y V = F
+         *  F y F = F
+         * 
+         *  V o V = V
+         *  V o F = V
+         *  F o V = V
+         *  F o F = F
+         * 
+         * V y V = V
+         * F o F = F
+         */
+
+    }
+    return arrAux; //return [20,30,70]
+
+}
+
+b = removeRange([20, 30, 40, 50, 60, 70], 1, 3); //b= [20,30,70]
+console.log(b); //[20,30,70]
+
+
+if (sexo == "F" && edad > 18) {
+
+} else if (sexo == "M" && edad > 18) {
+
+}
+
+/**
+ * los pasos para cambiar la rueda de un vehiculo
+ */
