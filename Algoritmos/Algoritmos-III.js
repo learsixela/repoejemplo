@@ -111,7 +111,6 @@ for (var w = 0; w < v.length; w++) { //w= 0>1 >2>3
 }
 console.log(v); //v=[1,2]
 
-
 /**Parte 2**/
 //1) Analiza los valores de un array y 
 //obtén el promedio (average) de esos valores:
@@ -229,3 +228,29 @@ if (sexo == "F" && edad > 18) {
 /**
  * los pasos para cambiar la rueda de un vehiculo
  */
+
+
+sum max min[1, 3, 10] //10+1
+
+
+min = [-2, -5, -10] //-12
+
+
+function sumMaxMin(arreglo) {
+    var minimo = arreglo[0];
+    var maximo = arreglo[0];
+
+    for (let index = 0; index < arreglo.length; index++) {
+        if (maximo < arreglo[index]) {
+            maximo = arreglo[index]
+        }
+        if (minimo > arreglo[index]) {
+            minimo = arreglo[index]
+        }
+    }
+    return maximo + minimo; //-2 + -11
+}
+b = sumMaxMin([1, 3, 10])
+console.log(b); //11
+c = sumMaxMin([-2, -5, -10])
+console.log(c); //-13
