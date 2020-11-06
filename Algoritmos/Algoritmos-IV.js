@@ -84,7 +84,6 @@ function reemplazarNegativos(arreglo) {
             newArray.push(arreglo[i]);
         }
     }
-
     return arreglo;
 }
 f = reemplazarNegativos([1, 2, -3, -5, 5]);
@@ -95,7 +94,8 @@ console.log(f);
 remueve los valores en el rango del índice dado( acortando el array). 
 Por ejemplo, removerRango([20,30,40,50,60,70],2,4) debiera devolver [20,30,70].
 */
-//[ 2,3,4,5] , 4 0   4 5 6 7 8 9 
+
+
 function removerRango(arreglo, rangoInicio, rangoFin) {
     let newArray = [];
     for (let i = 0; i < arreglo.length; i++) {
@@ -108,14 +108,6 @@ function removerRango(arreglo, rangoInicio, rangoFin) {
 
 g = removerRango([20, 30, 40, 50, 60, 70], 2, 4);
 console.log(g);
-
-if (a > b && ) {
-    if () {
-        if () {
-            console.log();
-        }
-    }
-}
 
 /*
 <html lang = "en" >
