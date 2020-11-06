@@ -47,11 +47,54 @@ function moverAdelante2(arreglo) { //arreglo = [2,4,6,8]; //arreglo.length = 4 ;
 console.log(moverAdelante2([2, 4, 6, 8])); //0,1,2,3;
 
 
-/*Configura un array para que el resultado sean los valores en el orden contrario. 
-Por ejemplo, returnReverso([1,2,3]) debe dar [3,2,1].*/
+/*3.- Configura un array para que el resultado sean los valores en el orden contrario. 
+Por ejemplo, returnReverso([1,2,3,4]) debe dar [4,3,2,1].*/
+function returnReverso(array) { //array= [1,2,3,4]; array.length = 4; 
+    let nuevoArreglo = []; //[4,3,2,1]
+    for (let i = array.length - 1; i >= 0; i--) { //i =3>2>1>0>-1
+        nuevoArreglo.push(array[i]);
+    }
+    return nuevoArreglo;
+}
 
+console.log(returnReverso([1, 2, 3, 4])); //[4,3,2,1]
 
+function returnReverso2(array) { //array= [1,2,3,4]; array.length = 4; 
+    let nuevoArreglo = []; //[4,3,2,1]
+    for (let i = 0; i < array.length; i++) { //i=0>1>2>3>4
+        //array[array.length-1];
+        var posicionUltimoElemento = array.length - 1
+        nuevoArreglo.push(array[posicionUltimoElemento - i]); //array[ 4-(1+3) ] => array[0]
+    }
+    return nuevoArreglo;
+}
 
+console.log(returnReverso2([1, 2, 3, 4]));
 
+/*Crea una función que cambie un array repitiendo sus valores originales (manteniendo el mismo orden). 
+Por ejemplo, repetirValores([4,”Ulysses”, 42, false]) 
+debiera dar [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].*/
 
-/*Crea una función que cambie un array repitiendo sus valores originales (manteniendo el mismo orden). Por ejemplo, repetirValores([4,”Ulysses”, 42, false]) debiera dar [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].*/
+function repetirValores(array) {
+    let nuevoarray = [];
+    for (let i = 0; i < array.length; i++) {
+        nuevoarray.push(array[i]);
+        nuevoarray.push(array[i]);
+    }
+    return nuevoarray;
+
+}
+
+var resultado = repetirValores([4, "Ulysses", 42, false]);
+console.log(resultado);
+
+function repetirValores(array) {
+
+    for (var i = array.length - 1; i >= 0; i--) {
+        array[2 * (i + 1)] = array[i];
+        array[2 * i] = array[i];
+    }
+    return array;
+}
+
+var resultado = repetirValores([4, "Ulysses", 42, false]);
