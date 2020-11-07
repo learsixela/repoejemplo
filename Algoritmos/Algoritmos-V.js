@@ -91,7 +91,7 @@ console.log(resultado);
 function repetirValores(array) {
 
     for (var i = array.length - 1; i >= 0; i--) {
-        array[2 * (i + 1)] = array[i];
+        array[2 * i + 1] = array[i];
         array[2 * i] = array[i];
     }
     return array;
