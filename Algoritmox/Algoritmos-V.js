@@ -75,10 +75,11 @@ console.log(returnReverso2([1, 2, 3, 4]));
 Por ejemplo, repetirValores([4,”Ulysses”, 42, false]) 
 debiera dar [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].*/
 
-function repetirValores(array) {
-    let nuevoarray = [];
-    for (let i = 0; i < array.length; i++) {
+function repetirValores(array) { //array = [4, "Ulysses", 42, false]; array.length=4;
+    let nuevoarray = []; //[4,4,"Ulysses","Ulysses",42,42,false,false]
+    for (let i = 0; i < array.length; i++) { //i=0>1>2>3>4
         nuevoarray.push(array[i]);
+        //elemento en el arreglo en la pposicion
         nuevoarray.push(array[i]);
     }
     return nuevoarray;
@@ -88,13 +89,86 @@ function repetirValores(array) {
 var resultado = repetirValores([4, "Ulysses", 42, false]);
 console.log(resultado);
 
-function repetirValores(array) {
+//[4,”Ulysses”, 42, false]->[4,4,"Ulysses","Ulysses",42,42,false,false]
+function repetirValores(array) { //array.length = 4
 
-    for (var i = array.length - 1; i >= 0; i--) {
-        array[2 * i + 1] = array[i];
-        array[2 * i] = array[i];
+    for (var i = array.length - 1; i >= 0; i--) { //i= 3>2>1>0>-1
+        //array = [4,4, "Ulysses", "Ulysses",42,42,false,false]
+
+        array[2 * i + 1] = array[i]; //array[2*0+1]=>array[1]=4
+        array[2 * i] = array[i]; //array[0]=4
+
     }
     return array;
 }
 
 var resultado = repetirValores([4, "Ulysses", 42, false]);
+
+
+for (let i = 0; i < array.length; i++) {
+    //desde la posicion 0 en adelante
+}
+
+for (var i = array.length - 1; i >= 0; i--) {
+    // desde el ultimo elemento hasta la posicion 0
+}
+
+
+// si la asignacion a un espacio del arreglo no existe:
+//lo asigna
+// en caso de existir, lo reemplaza
+//ejemplo
+// var arreglo= []
+// arreglo[9]= 77 -> no existia , lo creó y asignó
+// arreglo[9]= 78 -> como existe, lo reemplaza
+
+
+/* 
+var users = [
+    {name: "Michael", age:37}, 
+    {name: "John", age:30}, 
+    {name: "David", age:27}
+];
+*/
+// users[0]->{name: "Michael", age:37}
+
+
+
+// users[1]->{name: "John", age:30}
+// users[users.length-1]->{name: "David", age:27}
+// users[2]->{name: "David", age:27}
+
+for (let i = 0; i < array.length; i++) {
+    console.log(array[i].name);
+    console.log(array[i].age);
+}
+
+
+var users = [
+    { name: "Michael", age: 37 },
+    { name: "John", age: 30 },
+    { name: "David", age: 27 }
+];
+
+
+function nuevoFor(arreglo) { //arreglo = users
+
+    for (x of arreglo) {
+        //1era vuelta x= {name: "Michael", age:37}, 
+        console.log(x.name);
+        console, log(x.age);
+    }
+}
+
+nuevoFor(users);
+/*** */
+function valoresArreglo(arreglo) { //arreglo = variable
+
+    for (x of arreglo) { //x=2>4
+        console.log(x); //2,4
+    }
+    arreglo[2]
+
+}
+var variable = [2, 4, 6, 8];
+valoresArreglo(variable);

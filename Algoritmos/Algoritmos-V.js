@@ -78,7 +78,8 @@ debiera dar [4,4, “Ulysses”, “Ulysses”, 42, 42, false, false].*/
 function repetirValores(array) { //array = [4, "Ulysses", 42, false]; array.length=4;
     let nuevoarray = []; //[4,4,"Ulysses","Ulysses",42,42,false,false]
     for (let i = 0; i < array.length; i++) { //i=0>1>2>3>4
-        nuevoarray.push(array[i]); //elemento en el arreglo en la pposicion
+        nuevoarray.push(array[i]);
+        //elemento en el arreglo en la pposicion
         nuevoarray.push(array[i]);
     }
     return nuevoarray;
@@ -87,7 +88,6 @@ function repetirValores(array) { //array = [4, "Ulysses", 42, false]; array.leng
 
 var resultado = repetirValores([4, "Ulysses", 42, false]);
 console.log(resultado);
-
 
 //[4,”Ulysses”, 42, false]->[4,4,"Ulysses","Ulysses",42,42,false,false]
 function repetirValores(array) { //array.length = 4
@@ -139,6 +139,36 @@ var users = [
 // users[2]->{name: "David", age:27}
 
 for (let i = 0; i < array.length; i++) {
-    console.log(users[i].name);
-    console.log(users[i].age);
+    console.log(array[i].name);
+    console.log(array[i].age);
 }
+
+
+var users = [
+    { name: "Michael", age: 37 },
+    { name: "John", age: 30 },
+    { name: "David", age: 27 }
+];
+
+
+function nuevoFor(arreglo) { //arreglo = users
+
+    for (x of arreglo) {
+        //1era vuelta x= {name: "Michael", age:37}, 
+        console.log(x.name);
+        console, log(x.age);
+    }
+}
+
+nuevoFor(users);
+/*** */
+function valoresArreglo(arreglo) { //arreglo = variable
+
+    for (x of arreglo) { //x=2>4
+        console.log(x); //2,4
+    }
+    arreglo[2]
+
+}
+var variable = [2, 4, 6, 8];
+valoresArreglo(variable);

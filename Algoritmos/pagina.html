@@ -1,23 +1,30 @@
 <html>
 <script>
-    function objetos() {
-        var users = [{
-            name: "Michael",
-            age: 37
-        }, {
-            name: "John",
-            age: 30
-        }, {
-            name: "David",
-            age: 27
-        }];
-        for (let i = 0; i < users.length; i++) {
-            console.log(users[i].name);
-            console.log(users[i].age);
-        }
-    }
+    var array1 = [1, 15, 10];
 
-    objetos();
+    function MaxMinProm(array) {
+        let max = array[0];
+        let min = array[0];
+        let suma = 0;
+        let prom = 0;
+        if (array.length >= 1) {
+
+            for (let i = 0; i < array.length; i++) {
+                if (array[i] > max) {
+                    max = array[i];
+                }
+                if (array[i] < min) {
+                    min = array[i];
+                }
+            }
+            for (let s = 0; s < array.length; s++) {
+                suma = suma + array[s];
+            }
+            prom = suma / array.length;
+        }
+        console.log(max, min, prom);
+    }
+    var a = MaxMinProm([array1]);
 </script>
 
 </html>
