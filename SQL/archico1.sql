@@ -16,12 +16,19 @@ USE ayun;
 DROP DATABASE zzzz;
 
 -- creacion de tablas dentro de la base de datos seleccionada
--- CREATE TABLE nombre_da_la _tabla( );
+-- CREATE TABLE nombre_de_la _tabla( );
 
 CREATE TABLE personas (
-    id 
+    id INT,
+    nombre VARCHAR(255),
+    apellido VARCHAR(255)
 );
 
+-- SABER LAS TABLAS EN UNA BASE DE DATOS
+SHOW TABLES;
+
+-- eliminar una tabla 
+DROP TABLE JUGETES;
 
 
 
