@@ -1,14 +1,17 @@
 <html>
 <script>
-    function a() {
-        for (var i = 0; i < 10; i++) {
-            //i=0>2>3>5>6>8>9>11>12
-            i = i + 2;
-            console.log(i);
-            //2,5,8,11
+    function obtenerPromedio(array) {
+        let promedio = array[0];
+        let suma = 0;
+
+        for (let i = 0; i < array.length; i++) {
+            suma = suma + array[i];
         }
+        promedio = suma / array.length;
+        return promedio;
     }
-    a();
+
+    console.log(obtenerPromedio([1, 3, 5, 7, 20])); //15
 </script>
 
 </html>
